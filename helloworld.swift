@@ -42,7 +42,11 @@ print("Whether 40 exist in myDict: \(myDict.contains{ $0.key == 40})")
 if arr[0] != 4{
     print("The first element of arr does not equal to 4")
 }
-
+/*
+These code has some error and do not know how to debug
+var parenthesesDict: [Character: Character] = ["(":")", "[":"]", "{":"}"]
+print("The corresponding parenthesis of { is: \(parenthesesDict["{"])")
+*/
 func recur(_ n: Int)->Int{
     if n==0{
         return 1
