@@ -12,7 +12,7 @@ print("The value of variable is: \(variable)")
 
 var str="abcd"
 print("The length of str is \(str.count)")
-
+print("str equals to 'abce':\(str=="abce")")
 var num_str="123"
 if let num = Int(num_str) {
     print("The num minus 10 is \(num - 10)")
