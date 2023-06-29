@@ -12,6 +12,13 @@ print("The value of variable is: \(variable)")
 
 var str="abcd"
 print("The length of str is \(str.count)")
+
+var num_str="123"
+if let num = Int(num_str) {
+    print("The num minus 10 is \(num - 10)")
+} else {
+    print("Invalid integer format")
+}
 /*
 This will cause an error:
 print("The second character is str is \(str[1])")
