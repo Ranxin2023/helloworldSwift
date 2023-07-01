@@ -41,6 +41,14 @@ for element in arr{
     print(element, terminator:"\t")
 }
 print()
+print("matrix of 3*5 is ")
+var matrix=[[Int]](repeating:[Int](repeating: 0, count:3), count:5)
+for row in matrix{
+    for value in row{
+        print(value, terminator:"\t")
+    }
+    print()
+}
 var myDict=[Int: String]()
 myDict[10]="Ten"
 myDict[20]="Twenty"
