@@ -15,22 +15,32 @@ func loopDemo(){
 }
 
 func stringDemo(){
-    let str="abcd"
-    print("The length of str is \(str.count)")
-    print("str equals to 'abce':\(str=="abce")")
     let num_str="123"
     if let num = Int(num_str) {
         print("The num minus 10 is \(num - 10)")
     } else {
         print("Invalid integer format")
     }
+    let str="azbeacd"
+    print("The length of str is \(str.count)")
+    print("str equals to 'abce':\(str=="abce")")
+    
     /*
     This will cause an error:
     print("The second character is str is \(str[1])")
     */
     print("The second character is str is \(str[str.index(str.startIndex, offsetBy: 1)])")
-    let str_arr = Array(str.utf8CString)
-    print("str_arr[1] is\(str_arr[1])")
+    let strArr = Array(str)
+    print("str_arr[1] is: \(strArr[1])")
+    // print("Ascii Value of strArr[1]:\(strArr[1].asciiValue!)")
+    var countChar=[Int](repeating:0, count:26)
+    for c in str.utf8{
+        countChar[Int(c-97)] += 1
+    }
+
+    for (i, count) in countChar.enumerated(){
+        print("Character: \(Character(UnicodeScalar(i+97)!)) Count: \(count)")
+    }
 }
 
 func arrayDemo(){
@@ -151,6 +161,7 @@ func classDemo(){
 func main(){
     printVariableDemo()
     loopDemo()
+    stringDemo()
     arrayDemo()
     matrixDemo()
     setDemo()
