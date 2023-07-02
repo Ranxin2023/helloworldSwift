@@ -103,14 +103,48 @@ class Person{
         self.name=firstName+" "+lastName
         self.age=age
     }
-    func show()->Void{
+    func introduce()->Void{
         print("My name is \(self.name). I am \(self.age) years old.")
     }
 }
 
+class Student:Person{
+    var schoolName:String
+    var major:String
+    init(_ firstName:String, _ lastName:String,_ age:Int, _ schoolName:String, _ major:String){
+        self.schoolName=schoolName
+        self.major=major
+        super.init(firstName, lastName, age)
+    }
+    override func introduce()->Void{
+        print("Dear professor:","My name is \(self.name). I am \(self.age) years old.",
+        "I am a \(self.schoolName) student. My major is \(self.major).", separator:"\n")
+    }
+
+    func study()->String{
+        switch self.major{
+            case "Computer Science":
+            return "Writing Code"
+            // break; delete that
+            case "Biology":
+            return "Doing Lab";
+            default:
+            return "Nothing"
+            // break;
+        }
+        // return "";
+    }
+
+    func getName()->String{
+        return self.name
+    }
+}
 func classDemo(){
     let p=Person("John", "Smith", 25)
-    p.show()
+    p.introduce()
+    let s=Student("John", "Smith", 25, "UCDavis", "Computer Science")
+    s.introduce()
+    print("What \(s.getName()) is Studying:\(s.study())")
 }
 
 
