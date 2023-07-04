@@ -41,6 +41,9 @@ func stringDemo(){
     for (i, count) in countChar.enumerated(){
         print("Character: \(Character(UnicodeScalar(i+97)!)) Count: \(count)")
     }
+
+    let sortedStr=String(str.sorted())
+    print("str sorted is:\(sortedStr)")
 }
 
 func arrayDemo(){
@@ -86,7 +89,14 @@ func dictDemo(){
     myDict[20]="Twenty"
     myDict[30]="Thirty"
     print("Whether 40 exist in myDict: \(myDict.contains{ $0.key == 40})")
-    
+    let nums=[6, 4, 1, 3, 1, 5, 6, 8, 6, 9]
+    var countDict=[Int: Int]()
+    for num in nums{
+        countDict[num, default:0]+=1
+    }
+    for (key, value) in countDict{
+        print("num:\(key), count:\(value)")
+    }
     /*
     These code has some error and do not know how to debug
     var parenthesesDict: [Character: Character] = ["(":")", "[":"]", "{":"}"]
