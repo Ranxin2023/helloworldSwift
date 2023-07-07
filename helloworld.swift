@@ -6,7 +6,12 @@ func printVariableDemo(){
     let variable=42
     print("The value of variable is: \(variable)")
 }
-
+func intDemo(){
+    let a:Int = 1000000
+    let b:Int = 1000000
+    let result:Int64=Int64(1*a*b)
+    print("1000000*1000000 is \(result)")
+}
 func loopDemo(){
     print("print from 0 to 9:")
     for i in 0..<10{
@@ -170,6 +175,7 @@ func classDemo(){
 
 func main(){
     printVariableDemo()
+    intDemo()
     loopDemo()
     stringDemo()
     arrayDemo()
