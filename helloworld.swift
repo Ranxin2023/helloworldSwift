@@ -49,6 +49,12 @@ func stringDemo(){
 
     let sortedStr=String(str.sorted())
     print("str sorted is:\(sortedStr)")
+    let sentence="Today is a beautiful day."
+    let words=sentence.split(separator:" ")
+    print("words in the sentence are")
+    for word in words{
+        print(word)
+    }
 }
 
 func arrayDemo(){
